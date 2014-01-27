@@ -1,0 +1,6 @@
+<br><br>
+<table border="0" width="250" class="table" align="center">
+<tr>
+<td class="error">No information was entered into the <strong>Band Name</strong> field,please post a valid entry. Clicking the back button on the Browser will preserve your information.</td>
+</tr>
+</table>

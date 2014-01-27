@@ -1,0 +1,1 @@
+<p class="error">The email address you have entered<br>is invalid, please post a valid entry. Clicking the back<br>button on the Browser will preserve your information.</p>

@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Private Lessons Info</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script type="text/javascript">
+	function send_url(destination) {
+		if (window.opener != null) {
+			window.opener.location.href = destination;
+			window.close();
+		}
+		else {
+			window.location.href = destination;
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<h2 class="brown">Private Lessons</h2>
+
+<hr width="50%">
+
+<blockquote>
+	
+  <p><strong>Class Info:</strong></p>
+  
+  <p style="text-indent: 25px">Private Lessons are offered for students who would 
+    like a one on one atmosphere. The Instructor will focus mainly on what the 
+    student wants to learn, and will be able to help them develop their playing 
+    more fully. During a Private Lesson, the Instructor will be able to adapt 
+    to the students learning speed. Also, our ways of teaching will be centered 
+    around the students progression, building on their strengths, and working 
+    on their weaknesses.</p>
+
+  <p style="text-indent: 25px">Private Lessons are centered around the student, therefore we are willing 
+    to work with other dates or times that will be easier for the student. However, 
+    if at all possible, we would like to keep to our preferred dates which are 
+    set in the <a href="javascript: send_url('schedule.php');">Class Schedules</a>.</p>
+
+  <p><strong>Pricing:</strong></p>
+  
+  <p style="text-indent: 25px">Perfect Note Instructors can teach Private Lessons 
+    either in our regular classroom, or if the student requests, we can teach 
+    them in a more convenient area (Home, School, etc.). We understand that some 
+    students will not be able to get to our classroom, for whatever reason, thus 
+    we are willing to drive to them. For our Instructor to drive to your specific 
+    location, we will add $5 to the Lesson Price.</p>
+  
+  <ul>
+  <li><strong>Specific Location:</strong> $50</li>
+  <li><strong>Classroom:</strong> $45</li>
+  </ul>
+	
+	<p style="text-indent: 25px">If you have any questions regarding these lessons, please <a href="javascript:send_url('contact.php');">Contact Us</a></p>
+</blockquote>
+
+<p align="center">[ <a href="javascript: send_url('signup/private_signup.php');">Sign Up for Private Lessons</a> ]</p>
+
+<hr width="50%">
+
+<p align="center"><a href="javascript: send_url('index.php');"><img src="images/sm_logo.gif"></a></p>
+
+<p align="center">[ <a href="javascript:window.close();">Close Window</a> ]</p>
+
+</body>
+</html>

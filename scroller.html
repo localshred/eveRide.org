@@ -1,0 +1,144 @@
+<script language="JavaScript1.2">
+
+/*
+Fading Scroller- By DynamicDrive.com
+For full source code, and usage terms, visit http://www.dynamicdrive.com
+This notice MUST stay intact for use
+*/
+
+var delay=5000 //set delay between message change (in miliseconds)
+var fcontent=new Array()
+begintag='' //set opening tag, such as font declarations
+fcontent[0]="<a href='vc_f.php'>eveRide is dedicated to building everparks and serving world communities?</a>"
+
+fcontent[1]="<a href='band_f.php'>you can register your band to play at our Humanitarian Events</a>"
+
+fcontent[2]="<a href='everpark_f.php'>everparks will be the best snowparks in the world?</a>"
+
+fcontent[3]="<a href='everpark_f.php#city'>everparks will have tons of new rails and boxes?</a>"
+
+fcontent[4]="<a href='everpark_f.php#pipe'>everparks aim to have the best halfpipes in the world?</a>"
+
+fcontent[5]="<a href='everpark_f.php#wgg'>everparks will be maintained to perfection by specialized crews?</a>"
+
+fcontent[6]="<a href='everpark_f.php#rev'>riding at a everpark will cost less than half of what most ski resorts charge?</a>"
+
+fcontent[7]="<a href='everpark_f.php#air'>everparks will have perfect kickers, jumps and tabletops?</a>"
+
+fcontent[8]="<a href='sponsor_f.php#benefit'>there are some great benefits for sponsoring eveRide?</a>"
+
+fcontent[9]="<a href='contact_f.php?sel=general'>you can directly contact the founders with your own suggestions and ideas?</a>"
+
+fcontent[10]="<a href='everpark_f.php#anti'>everparks will have a safer, faster, and more environment-friendly kind of lift?</a>"
+
+fcontent[11]="<a href='everpark_f.php#rev'>the everparks will have new technology to keep riders safer?</a>"
+
+fcontent[12]="<a href='terrainsketch_f.php'>concept drawings of most rails, jumps, pipes, and air features are on this site?</a>"
+
+fcontent[13]="<a href='left/survey_f.php'>you can help out the eveRide cause by taking a quick survey?</a>"
+
+fcontent[14]="<a href='stoked_f.php'>that the sponsor hear when you sign the stoked list?</a>"
+
+fcontent[15]="<a href='everpark_f.php#wgg'>you'll be able to customize the terrain at everpark?</a>"
+
+fcontent[16]="<a href='everpark_f.php#sled'>everparks will have great tubing and sledding areas?</a>"
+
+fcontent[17]="<a href='stokedsigners_f.php#ideas'>you can help the eveRide cause by referring sponsors, donating, and spreading the word?</strong>"
+
+fcontent[18]="<a href='vc_f.php#founder'>you can meet the founders and see how this whole thing got started?</a>"
+
+fcontent[19]="<a href='vc_f.php#hp'>eveRide will support good causes like youth programs, charities, and education?</a>"
+
+fcontent[20]="<a href='donate_f.php'>you can get beanies, shirts, and more for donating to the eveRide cause?</a>"
+
+fcontent[21]="<a href='represent_f.php#contest'>you can win free stuff by entering the photo, t-shirt, or terrain design contests?</a>"
+
+fcontent[22]="<a href='sponsor_f.php#dd'>you can know where all the donation money goes to?</a>"
+
+fcontent[23]="<a href='terrainsketch_f.php'>you can see sketches of terrain that will be in the everparks?</a>"
+
+fcontent[24]="<a href='terraindesign_f.php'>you can submit your own terrain and we'll probably build it for the everparks?</a>"
+ 
+closetag=''
+
+var fwidth='140px' //set scroller width
+var fheight='70px' //set scroller height
+
+var fadescheme=0 //set 0 to fade text color from (white to black), 1 for (black to white)
+var fadelinks=1  //should links inside scroller content also fade like text? 0 for no, 1 for yes.
+
+///No need to edit below this line/////////////////
+
+var hex=(fadescheme==0)? 255 : 0
+var startcolor=(fadescheme==0)? "rgb(255,255,255)" : "rgb(0,0,0)"
+var endcolor=(fadescheme==0)? "rgb(0,0,0)" : "rgb(255,255,255)"
+
+var ie4=document.all&&!document.getElementById
+var ns4=document.layers
+var DOM2=document.getElementById
+var faderdelay=0
+var index=0
+
+if (DOM2)
+faderdelay=450
+
+//function to change content
+function changecontent(){
+if (index>=fcontent.length)
+index=0
+if (DOM2){
+document.getElementById("fscroller").style.color=startcolor
+document.getElementById("fscroller").innerHTML=begintag+fcontent[index]+closetag
+linksobj=document.getElementById("fscroller").getElementsByTagName("A")
+if (fadelinks)
+linkcolorchange(linksobj)
+colorfade()
+}
+else if (ie4)
+document.all.fscroller.innerHTML=begintag+fcontent[index]+closetag
+else if (ns4){
+document.fscrollerns.document.fscrollerns_sub.document.write(begintag+fcontent[index]+closetag)
+document.fscrollerns.document.fscrollerns_sub.document.close()
+}
+
+index++
+setTimeout("changecontent()",delay+faderdelay)
+}
+
+// colorfade() partially by Marcio Galli for Netscape Communications.  ////////////
+// Modified by Dynamicdrive.com
+
+frame=20;
+
+function linkcolorchange(obj){
+if (obj.length>0){
+for (i=0;i<obj.length;i++)
+obj[i].style.color="rgb("+hex+","+hex+","+hex+")"
+}
+}
+
+function colorfade() {	         	
+// 20 frames fading process
+if(frame>0) {	
+hex=(fadescheme==0)? hex-12 : hex+12 // increase or decrease color value depd on fadescheme
+document.getElementById("fscroller").style.color="rgb("+hex+","+hex+","+hex+")"; // Set color value.
+if (fadelinks)
+linkcolorchange(linksobj)
+frame--;
+setTimeout("colorfade()",20);	
+}
+
+else{
+document.getElementById("fscroller").style.color=endcolor;
+frame=20;
+hex=(fadescheme==0)? 255 : 0
+}   
+}
+
+if (ie4||DOM2)
+document.write('<div id="fscroller" style="width:'+fwidth+';height:'+fheight+';padding:2px"></div>')
+
+</script>
+
+
+<ilayer id="fscrollerns" width=&{fwidth}; height=&{fheight};><layer id="fscrollerns_sub" width=&{fwidth}; height=&{fheight}; left=0 top=0></layer></ilayer>

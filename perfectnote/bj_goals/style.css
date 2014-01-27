@@ -1,0 +1,12 @@
+body,table,p,pre {
+	background-color: #CC9900;
+	color: #000000;
+	font-family: Lucida Sans Unicode;
+	font-size: 14px;
+}
+.print {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: arial;
+	font-size: 13px;
+}

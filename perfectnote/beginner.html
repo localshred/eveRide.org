@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Beginner Lessons Class Info</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script type="text/javascript">
+	function send_url(destination) {
+		if (window.opener != null) {
+			window.opener.location.href = destination;
+			window.close();
+		}
+		else { 
+			window.location.href = destination;
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<h2 class="brown">Beginner Lessons</h2>
+
+<hr width="50%">
+
+<blockquote>
+  <p><strong>Is this for me?</strong></p>
+
+  <p style="text-indent: 25px">Our Beginner Lessons are offered for students who 
+    have never picked up a Guitar, or for students who are just trying to get 
+    down the basics. If you know a few Chords, or just trying to get down your 
+    strumming, these lessons are for you. For instance, if you only know around 
+    four or five chords, and struggle with getting the strumming down, these lessons 
+    are perfect for you. Our Instructors are willing to help students at all levels 
+    of playing to understand the basics of playing the Guitar.</p>
+  
+  <p><strong>What if I'm not sure about beginner lessons?</strong></p>
+  
+  <p style="text-indent: 25px">If you have been signed up for beginner lessons and feel that you aren't 
+    progressing, we can easily move you to the Intermediate course. Also, if the 
+    Instructor feels that your skill is above the Beginner Level, you will have 
+    the option to jump to the Intermediate Lessons.</p>
+	
+	
+  <p style="text-indent: 25px">If you have any questions regarding these lessons, please <a href="javascript: send_url('contact.php');">Contact Us</a></p>
+</blockquote>
+
+<p align="center">[ <a href="javascript: send_url('signup/begin_signup.php');">Sign Up for Beginner Lessons</a> ]</p>
+
+<hr width="50%">
+
+<p align="center"><a href="javascript: send_url('index.php');"><img src="images/sm_logo.gif"></a></p>
+
+<p align="center">[ <a href="javascript: window.close();">Close Window</a> ]</p>
+
+</body>
+</html>

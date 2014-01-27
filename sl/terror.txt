@@ -1,0 +1,1 @@
+<p class="error">No information was entered into the <strong>Town</strong> field,<br>please post a valid entry. Clicking the back<br>button on the Browser will preserve your information.</p>

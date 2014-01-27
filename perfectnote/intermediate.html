@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Intermediate Lessons Class Info</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script type="text/javascript">
+	function send_url(destination) {
+		if (window.opener != null) {
+			window.opener.location.href = destination;
+			window.close();
+		}
+		else {
+			window.location.href = destination;
+		}
+	}
+</script>
+</head>
+
+<body>
+
+<h2 class="brown">Intermediate Lessons</h2>
+
+<hr width="50%">
+
+<blockquote>
+	
+  <p><strong>Is this for me?</strong></p>
+  
+  <p style="text-indent: 25px">Intermediate Lessons are designed for students 
+    who have played the guitar, are used to strumming and understand basic chord 
+    progression. For instance, if you know around six or seven songs, and feel 
+    comfortable with your overall playing , these lessons are for you. Perfect 
+    Note has created these lessons for people who want to continue their progression 
+    and learn different styles of playing.</p>
+	  
+	
+  <p><strong>I want to excel!</strong></p>
+  
+  <p style="text-indent: 25px">This class is also designed for students who are 
+    at a stand still in their current skills, or are struggling with certain strumming 
+    patterns, picking patterns, or just overall songs.</p>
+	
+	<p style="text-indent: 25px">If you have any questions regarding these lessons, please <a href="javascript:send_url('contact.php');">Contact Us</a></p>
+</blockquote>
+
+<p align="center">[ <a href="javascript: send_url('signup/inter_signup.php');">Sign Up for Intermediate Lessons</a> ]</p>
+
+<hr width="50%">
+
+<p align="center"><a href="javascript: send_url('index.php');"><img src="images/sm_logo.gif"></a></p>
+
+<p align="center">[ <a href="javascript:window.close();">Close Window</a> ]</p>
+
+</body>
+</html>
